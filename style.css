@@ -1,109 +1,107 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-header{
-    text-align: center;
-    font-family: "Montserrat Alternates", sans-serif;  
+header {
+  text-align: center;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
-div hr{
-    width: 50%;
+div hr {
+  width: 50%;
 }
 
 body {
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: 100vh;
 }
 
 .place {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .place p {
-    color: white;
-    font-weight: bold;
-    font-family: "Montserrat Alternates", sans-serif; 
-    font-size: small;
-    text-transform: uppercase;
-    text-align: center;
-    position: absolute;
-    padding-right: 10px;
-    
+  color: white;
+  font-weight: bold;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: small;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  padding-right: 11px;
 }
 
-
 .frame {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 50px 200px 50px 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 50px 200px 50px 200px;
 }
 
 img {
-    filter: grayscale(100%);
-    width:90%;
-    height: 500px;
-    object-fit: cover;
+  filter: grayscale(100%);
+  width: 90%;
+  height: 500px;
+  object-fit: cover;
 }
 
 .zoom {
-    transition: transform .5s;
+  transition: transform 0.5s;
+}
+
+.zoom:hover {
+  transform: scale(1.1);
+}
+
+.zoom:hover img {
+  filter: none;
+}
+
+@media only screen and (max-width: 868px) {
+  .frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 50px 50px 50px;
   }
-  
-  .zoom:hover {
-    transform: scale(1.1); 
+
+  div.photo.zoom.place {
+    width: 100%;
   }
 
-  .zoom:hover img {
-    filter: none;
+  div.photo a,
+  div.photo img {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
   }
 
-  @media only screen and (max-width: 868px) {
-   
-    .frame {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 50px 50px 50px 50px;
-    }
-
-    div.photo.zoom.place{
-        width: 100%;
-    }
-
-    div.photo a, div.photo img{
-        width: 100%;
-        height: 200px;
-        margin-bottom: 20px;
-    }
-
-    .place p {
-        font-size: medium;
-    }
+  .place p {
+    font-size: medium;
+  }
 }
 @media only screen and (max-width: 640px) {
-   
-    .frame {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 50px 50px 100px 50px;
-    }
+  .frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 50px 100px 50px;
+  }
 
-    div.photo.zoom.place{
-        width: 100%;
-    }
+  div.photo.zoom.place {
+    width: 100%;
+  }
 
-    div.photo a, div.photo img{
-        width: 100%;
-        height: 150px;
-        margin-bottom: 20px;
-    }
+  div.photo a,
+  div.photo img {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+  }
 
-    .place p {
-        font-size: large;
-    }
+  .place p {
+    font-size: large;
+  }
 }
